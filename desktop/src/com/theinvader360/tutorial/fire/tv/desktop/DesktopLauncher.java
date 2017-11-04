@@ -7,6 +7,17 @@ import com.theinvader360.tutorial.fire.tv.MyGdxGame;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		new LwjglApplication(new MyGdxGame(), config);
+		config.width = 640;
+		config.height = 360;
+		new LwjglApplication(new MyGdxGame(new ActionResolverDesktop(), isAmazonDevice(), isAmazonFireTVDevice()), config);
 	}
+
+	private static boolean isAmazonDevice() {
+		return false;
+	}
+
+	private static boolean isAmazonFireTVDevice() {
+		return false;
+	}
+
 }

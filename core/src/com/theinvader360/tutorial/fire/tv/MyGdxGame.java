@@ -3,8 +3,17 @@ package com.theinvader360.tutorial.fire.tv;
 import com.badlogic.gdx.Game;
 
 public class MyGdxGame extends Game {
+    public ActionResolver actionResolver;
     public MenuScreen menuScreen;
     public GameScreen gameScreen;
+    private boolean amazonDevice;
+    private boolean fireTVDevice;
+
+    public MyGdxGame(ActionResolver actionResolver, boolean amazonDevice, boolean fireTVDevice) {
+        this.actionResolver = actionResolver;
+        this.amazonDevice = amazonDevice;
+        this.fireTVDevice = fireTVDevice;
+    }
 
 	@Override
 	public void create() {
@@ -20,5 +29,13 @@ public class MyGdxGame extends Game {
         menuScreen.dispose();
         gameScreen.dispose();
 	}
+
+    public boolean isAmazonDevice() {
+        return amazonDevice;
+    }
+
+    public boolean isFireTVDevice() {
+        return fireTVDevice;
+    }
 
 }

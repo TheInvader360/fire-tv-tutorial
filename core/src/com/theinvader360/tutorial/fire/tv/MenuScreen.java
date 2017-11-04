@@ -92,7 +92,7 @@ public class MenuScreen extends ScreenAdapter {
     private void populate() {
         listItems.clear();
         listItems.add(MENU_OPTION_PLAY);
-        listItems.add(MENU_OPTION_MORE);
+        if (!game.isFireTVDevice()) listItems.add(MENU_OPTION_MORE);
         listItems.add(MENU_OPTION_QUIT);
         listView.setItems(listItems);
     }
@@ -102,7 +102,8 @@ public class MenuScreen extends ScreenAdapter {
             game.setScreen(game.gameScreen);
         }
         if (listItems.get(index) == MENU_OPTION_MORE) {
-            System.out.println("Not yet implemented..."); //TODO!
+            if (game.isAmazonDevice()) game.actionResolver.openUri("http://www.amazon.com/gp/mas/dl/android?s=com.theinvader360&showAll=1");
+            else game.actionResolver.openUri("http://play.google.com/store/apps/developer?id=TheInvader360");
         }
         if (listItems.get(index) == MENU_OPTION_QUIT) {
             Gdx.app.exit();
