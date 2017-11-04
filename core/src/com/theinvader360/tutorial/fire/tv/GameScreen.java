@@ -142,7 +142,7 @@ public class GameScreen extends ScreenAdapter {
     }
 
     private void checkSnakeCollision() {
-        for (BodyPart bodyPart : bodyParts) if (bodyPart.x == headX && bodyPart.y == headY) startNewGame();
+        for (BodyPart bodyPart : bodyParts) if (bodyPart.x == headX && bodyPart.y == headY) game.setScreen(game.menuScreen);
     }
 
     private void checkAppleCollision() {
