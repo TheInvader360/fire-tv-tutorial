@@ -8,7 +8,7 @@ Read about the motivation behind this project [here](http://blog.theinvader360.c
 
 Companion tutorial coming soon - keep an eye on [http://blog.theinvader360.com](http://blog.theinvader360.com)
 
-Get complete versions of the game (Hungry Caterpillar) here:
+Get complete versions of the game (Greedy Caterpillar) here:
 
-* [Google Play](https://play.google.com/store/apps/details?id=com.theinvader360.hungry.caterpillar.snake.game)
+* [Google Play](https://play.google.com/store/apps/details?id=com.theinvader360.greedy.caterpillar.snake.game)
 * [Amazon](https://www.amazon.co.uk/dp/B076NWQ77S)
